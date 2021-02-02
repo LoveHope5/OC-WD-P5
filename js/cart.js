@@ -50,8 +50,65 @@ const deleteItem = (index) =>{
 
 }
 
+const validate = (fname,lname,city,email,address) =>{
+
+    if(fname =="" || lname =="" || city =="" || email=="" || address==""){
+
+        return false;
+
+    }else{
+        return true;
+    }
+
+}
 
 
+const placeOrder = () =>{
+
+    //retrieve contact details
+     let firstName = document.getElementById("firstName").value ;
+     let lastName = document.getElementById("lastName").value ;
+     let email = document.getElementById("email").value ;
+     let city = document.getElementById("city").value ;
+     let address = document.getElementById("address").value ;
+
+     if(validate(firstName,lastName,city,email,address)){
+
+        alert("validation is correct")
+         //retrieve product ids
+
+
+
+        //merge the two into and object
+
+
+
+        //execute AJAX post and redirect to confirmation page
+
+
+
+     }else{
+
+        alert("please make sure none of the field are empty!");
+
+     }
+
+   
+
+
+}
+
+
+
+let submitButton = document.getElementById('submit-button');
+
+submitButton.addEventListener('click', (e) =>{
+    e.preventDefault();
+
+   // alert("Hey the submit button is working !!");
+
+   placeOrder();
+});
 
 
 
